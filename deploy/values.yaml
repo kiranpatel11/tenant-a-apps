@@ -1,0 +1,4 @@
+appName: tenant-a-hello
+image: registry.redhat.io/ubi9/httpd-24:latest
+replicas: 1
+routeHost: tenant-a-hello

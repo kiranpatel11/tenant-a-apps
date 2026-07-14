@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.appName }}
+  labels:
+    app: {{ .Values.appName }}
+    app.kubernetes.io/managed-by: tenant-a-apps
+    platform.ocp-gitops.io/tenant: tenant-a
+spec:
+  selector:
+    app: {{ .Values.appName }}
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
